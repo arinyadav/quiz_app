@@ -2,7 +2,7 @@ package com.example.myquizapp
 
 object Constants {
 
-    const val USER_NAME: String = "user_name"
+    const val  USER_NAME: String = "user_name"
     const val TOTAL_QUESTIONS: String = "toal_questions"
     const val CORRECT_ANSWERS: String = "correct_questions"
 

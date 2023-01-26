@@ -59,7 +59,7 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
 
     private fun setQuestions() {
         defaultOptionsView()
-
+        mCurrentPosition = 1
         val question: Question =mQuestionList!![mCurrentPosition - 1]
         progressBar?.progress = mCurrentPosition
         val imageResource: Unit? = imageView?.setImageResource(question.image)
@@ -168,7 +168,7 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
                {
                    val question=mQuestionList?.get(mCurrentPosition-1)
                    if(question!!.correctAns!=mSelectedPosition){
-                       answerView(mCurrentPosition, R.drawable.wrong_option_border_bg)
+                       answerView(mSelectedPosition, R.drawable.wrong_option_border_bg)
                    }
                    else {
                        mCorrectAnswers++
